@@ -1,0 +1,14 @@
+{% set currentPath = app.request.pathInfo %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('styles/header.css') }}">
+{% endblock %}
+{% block content %}
+    <header>
+        <h1>Boomva</h1>
+        <nav>
+            <a href="/streams" class="{% if ('/streams' in currentPath) %}active{% endif %}">streams</a>
+            <a href="/games" class="{% if ('/games' in currentPath) %}active{% endif %}">games</a>
+            <a href="/clips" class="{% if ('/clips' in currentPath) %}active{% endif %}">clips</a>
+        </nav>
+        </header>
+{% endblock %}

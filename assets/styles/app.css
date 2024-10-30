@@ -1,3 +1,29 @@
-body {
-    background-color: skyblue;
+@font-face {
+    font-family: 'Blanka';
+    src: url('../fonts/Blanka-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Lemon milk';
+    src: url('../fonts/LEMONMILK-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #AF59D9;
+    --secondary-color: #D959D8;
+    --touch-color: #D9598B;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #162447);
+    font-family: 'Lemon milk';
+    color: #ffffff;
+}
+
+
+
+
