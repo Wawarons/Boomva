@@ -13,21 +13,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #streams .stream {
     position: relative;
-    margin: 30px 1%;
+    margin: 5%;
     width: var(--div-width);
     height: var(--div-height);
     border-radius: 10px;
-    border: 2px 2px 2px solid #fff;
+    box-sizing: border-box;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-}
-
-#streams .stream p {
-    width: fit-content;
 }
 
 #streams .stream a {
@@ -37,29 +33,85 @@
     padding: 0;
 }
 
+@media (min-width: 768px) {
+    .data {
+        position: absolute;
+        opacity: 0;
+    }
+    
+    .data:hover {
+        opacity: 1;
+    }
+}
+
 .data {
-    position: absolute;
-    top: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+    background: linear-gradient(#00000000, #000000b4);
+}
+
+
+.data .title {
     backdrop-filter: blur(5px);
     background-color: #d959d97a;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    text-align: center;
     color: var(--touch-color);
     text-shadow: 1px 1px 1px #000;
-    padding: 5px;
-    margin: 10px auto;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-}
-
-.data:hover {
-    top: 0;
-    visibility: show;
-}
-
-.data p {
+    border-radius: 0 0 10px 10px;
+    border-bottom: 2px solid #fff;
+    padding: 5px 10px;
     margin: 0 auto;
     font-size: 13px;
+    text-align: center;
+    align-items: center;
+    width: 75%;
+    height: 25px;
+    line-height: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stream .live_circle_svg {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+    width: 10px;
+    height: 10px;
+}
+
+.views {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 0;
+    font-size: 12px;
+    padding: 5px;
+    color: #fff;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d959d97a;
+    border-radius: 10px 10px 0 0;
+    gap: 5px;
+    text-shadow: 1px 1px 1px #000;
+    border-top: 2px solid #fff;
+}
+
+.views p {
+    margin: 0;
+}
+
+.views .views_svg {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+
+.views .views_svg .views_svg_pupils {
+    color: var(--secondary-color);
 }

@@ -34,7 +34,7 @@ class TwitchController extends AbstractController
         $client = new Client();
         $response = $client->request(
             "GET",
-            "https://api.twitch.tv/helix/streams?first=100",
+            "https://api.twitch.tv/helix/streams?first=99",
             ['headers' => [
                 'Authorization' => 'Bearer ' . $token['access_token'],
                 'Client-Id' => $clientId

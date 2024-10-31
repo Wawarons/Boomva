@@ -19,7 +19,11 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a1a2e, #162447);
+    background: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Lemon milk';
     color: #ffffff;
 }
